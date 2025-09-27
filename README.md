@@ -70,14 +70,51 @@ docker stack deploy -c docker-compose.yml homelab-portal
 
 ## ⚙️ Configuration
 
-<!-- TODO: Add instructions for updating color, etc -->
+`config.json` controls how the portal looks and which links it shows.  
+This file is **not baked into the Docker image** — you mount it at runtime so it’s fully customizable.
 
-- config.json is not baked into the image — you mount it at runtime.
-- A sample file is provided as config.example.json.
-- Each entry requires:
-  - name: display name
-  - url: target URL
-  - icon: a Material Icon
+A sample file is provided as `config.example.json`.
+
+### Options
+
+| Key        | Type   | Description                                                                                    | Example                  |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------- | ------------------------ |
+| `title`    | string | Title shown in the navbar                                                                      | `"Home"`                 |
+| `theme`    | string | Theme mode, currently supports `"light"` or `"dark"`                                           | `"dark"`                 |
+| `navColor` | string | Navbar color, accepts any [Materialize CSS color class](https://materializecss.com/color.html) | `"deep-purple darken-1"` |
+| `links`    | array  | List of objects representing the cards shown on the portal                                     | _(see below)_            |
+
+### Links
+
+Each link object inside `links` must include:
+
+| Key    | Type   | Description                                                     | Example                  |
+| ------ | ------ | --------------------------------------------------------------- | ------------------------ |
+| `name` | string | Display name                                                    | `"Grafana"`              |
+| `url`  | string | Target URL                                                      | `"http://grafana.local"` |
+| `icon` | string | [Material Icon](https://fonts.google.com/icons) name to display | `"dashboard"`            |
+
+### Example `config.json`
+
+```json
+{
+  "title": "Home",
+  "theme": "dark",
+  "navColor": "deep-purple darken-1",
+  "links": [
+    {
+      "name": "Grafana",
+      "url": "http://grafana.local",
+      "icon": "dashboard"
+    },
+    {
+      "name": "Portainer",
+      "url": "http://portainer.local",
+      "icon": "cloud"
+    }
+  ]
+}
+```
 
 ## 🛠️ Development
 
