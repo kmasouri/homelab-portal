@@ -1,7 +1,6 @@
 # homelab-portal
 
-A super simple self-hosted portal for your homelab apps and bookmarks.  
-Inspired by [Flame](https://github.com/pawelmalak/flame), but lightweight and minimal.
+A super simple self-hosted portal for your homelab apps and bookmarks.
 
 <!-- TODO: add screenshot -->
 
