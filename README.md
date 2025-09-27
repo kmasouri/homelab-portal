@@ -6,8 +6,6 @@ A super simple self-hosted portal for your homelab apps and bookmarks.
 
 ![screenshot](docs/screenshot.png)
 
----
-
 ## ✨ Features
 
 - Clean Material Design UI (powered by [MaterializeCSS](https://materializecss.com/))
@@ -15,8 +13,6 @@ A super simple self-hosted portal for your homelab apps and bookmarks.
 - Clickable cards for your favorite apps
 - No backend — just static files + config.json
 - Runs anywhere with Docker
-
----
 
 ## 🚀 Quick Start
 
