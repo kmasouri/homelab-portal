@@ -1,0 +1,17 @@
+{
+  "title": "Home",
+  "theme": "dark",
+  "navColor": "deep-purple darken-1",
+  "links": [
+    {
+      "name": "Grafana",
+      "url": "http://grafana.local",
+      "icon": "dashboard"
+    },
+    {
+      "name": "Portainer",
+      "url": "http://portainer.local",
+      "icon": "cloud"
+    }
+  ]
+}

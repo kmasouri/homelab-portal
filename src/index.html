@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homelab Portal</title>
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="blue darken-3" id="navbar">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="portal-title">Homelab Portal</a>
+        <ul class="right">
+          <li>
+            <a href="#" id="theme-toggle">
+              <i class="material-icons">dark_mode</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Cards Grid -->
+    <div class="container">
+      <div class="row" id="links-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
